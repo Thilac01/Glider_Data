@@ -8,7 +8,7 @@ def get_data_from_server():
     try:
         ssh = paramiko.SSHClient()
         ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-        ssh.connect("170.64.176.75", username="streamlit", password="DEcrc@78172")
+        ssh.connect("add your server ip", username="your server name", password="add your server pwd")
         sftp = ssh.open_sftp()
         file_path = "Thilac/DATA/data.json"
         with sftp.file(file_path, "r") as file:
