@@ -10,7 +10,7 @@ ser = serial.Serial('COM6', 9600, timeout=1)  # Change 'COM6' to your Arduino po
 def ssh_connect():
     ssh = paramiko.SSHClient()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    ssh.connect("170.64.176.75", username="streamlit", password="DEcrc@78172")
+    ssh.connect("your server ip", username="your server name", password="your server pwd")
     return ssh
 
 # Function to save data to JSON file
